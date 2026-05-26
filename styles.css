@@ -254,7 +254,7 @@ a {
 
 .button-primary {
   background: #ffffff;
-  color: var(--ink);
+  color: #111418;
 }
 
 .button-secondary {
@@ -656,6 +656,7 @@ a {
     flex-direction: column;
   }
 }
+
 
 
 
