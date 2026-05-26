@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Emiliano Nakayama, desarrollador Java Backend especializado en APIs REST, Spring Boot, seguridad JWT y bases de datos.">
+  <title>Emiliano Nakayama | Java Backend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">EN</span>
+      <span>Emiliano Nakayama</span>
+    </a>
+    <div class="header-actions">
+      <nav class="nav" aria-label="Navegacion principal">
+        <a href="#perfil">Perfil</a>
+        <a href="#proyectos">Proyecto</a>
+        <a href="#stack">Stack</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span data-theme-label>Modo oscuro</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source srcset="assets/backend-workspace.webp" type="image/webp">
+          <img src="assets/backend-workspace.png" alt="">
+        </picture>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Java Backend Developer</p>
+        <h1 id="hero-title">APIs limpias, seguras y listas para integrarse.</h1>
+        <p class="hero-copy">
+          Soy Emiliano Nakayama. Construyo servicios backend con Spring Boot, foco en arquitectura por capas,
+          seguridad stateless, persistencia relacional y estructuras backend pensadas para mantenerse y evolucionar.
+        </p>
+        <div class="hero-actions" aria-label="Acciones principales">
+          <a class="button button-primary" href="#proyectos">Ver proyecto destacado</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/emiliano-nakayama/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <dl class="hero-stats" aria-label="Resumen tecnico">
+          <div>
+            <dt>Java</dt>
+            <dd>17 + Spring Boot</dd>
+          </div>
+          <div>
+            <dt>Seguridad</dt>
+            <dd>JWT + roles</dd>
+          </div>
+          <div>
+            <dt>DX</dt>
+            <dd>Docker + Swagger</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section intro-band" id="perfil" aria-labelledby="perfil-title">
+      <div class="section-grid">
+        <div>
+          <p class="section-kicker">Perfil</p>
+          <h2 id="perfil-title">Backend con criterio de producto.</h2>
+        </div>
+        <div class="lead-stack">
+          <p>
+            Me interesa crear APIs que se puedan mantener, probar y consumir sin friccion. Priorizo contratos
+            HTTP claros, reglas de negocio en servicios, DTOs para no exponer entidades y configuracion preparada
+            para distintos entornos.
+          </p>
+          <p>
+            Mi portfolio esta orientado a mostrar decisiones tecnicas: autenticacion, autorizacion, validaciones,
+            manejo de errores, persistencia, documentacion y ejecucion local reproducible. Tambien busco que
+            cada backend quede preparado para crecer, adaptarse a nuevas reglas de negocio y sumar funcionalidades
+            sin romper lo que ya funciona.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="section-kicker">Proyectos</p>
+        <h2 id="projects-title">Backend aplicado a problemas reales.</h2>
+        <p>
+          Cada proyecto muestra decisiones de arquitectura, seguridad, persistencia, testing y documentacion.
+        </p>
+      </div>
+
+      <article class="project-layout">
+        <div class="project-main">
+          <div class="project-topline">
+            <span class="status-dot"></span>
+            <span>Spring Boot REST API</span>
+          </div>
+          <h3>Gestion de turnos con seguridad JWT y arquitectura por capas.</h3>
+          <p>
+            <strong>Turnos Odontologico API.</strong> El proyecto resuelve un flujo real de administracion:
+            CRUD de pacientes y odontologos, creacion y
+            seguimiento de turnos, estados de confirmacion/cancelacion, reportes y control de acceso por rol.
+          </p>
+          <div class="project-actions">
+            <a class="button button-dark" href="https://github.com/nakayamaemiliano/turnosOdontologico" target="_blank" rel="noreferrer">Ver repositorio</a>
+            <a class="button button-light" href="https://github.com/nakayamaemiliano/turnosOdontologico#readme" target="_blank" rel="noreferrer">Leer README tecnico</a>
+          </div>
+        </div>
+
+        <div class="project-side" aria-label="Evidencia tecnica del proyecto">
+          <div class="metric">
+            <span class="metric-label">Arquitectura</span>
+            <strong>Controller -> Service -> Repository</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Auth</span>
+            <strong>Spring Security + JWT</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Datos</span>
+            <strong>JPA, MySQL y H2 para tests</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">DX</span>
+            <strong>Swagger, Docker Compose y variables de entorno</strong>
+          </div>
+        </div>
+      </article>
+
+      <div class="feature-grid" aria-label="Capacidades implementadas">
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">API</span>
+          <h3>Contratos REST</h3>
+          <p>Endpoints agrupados para autenticacion, pacientes, odontologos, turnos, usuarios, roles y permisos.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">JWT</span>
+          <h3>Seguridad stateless</h3>
+          <p>Login con token, filtro de validacion, roles ADMIN/USER y permisos sobre recursos protegidos.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">SQL</span>
+          <h3>Persistencia</h3>
+          <p>Modelo relacional con Spring Data JPA, repositorios dedicados y separacion mediante DTOs y mappers.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">QA</span>
+          <h3>Testing</h3>
+          <p>Tests unitarios con Mockito, contexto Spring, H2 y pruebas de utilidades de seguridad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stack-section" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading compact">
+        <p class="section-kicker">Stack</p>
+        <h2 id="stack-title">Herramientas que uso para construir backend.</h2>
+      </div>
+      <div class="stack-list" aria-label="Tecnologias">
+        <span>Java 17</span>
+        <span>Spring Boot</span>
+        <span>Spring Web MVC</span>
+        <span>Spring Security</span>
+        <span>JWT</span>
+        <span>Spring Data JPA</span>
+        <span>MySQL</span>
+        <span>H2</span>
+        <span>JUnit 5</span>
+        <span>Mockito</span>
+        <span>Swagger / OpenAPI</span>
+        <span>Docker</span>
+        <span>Maven</span>
+        <span>Git</span>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="section-kicker">Contacto</p>
+        <h2 id="contact-title">Estoy en busqueda de una experiencia profesional que me haga crecer como desarrollador backend.</h2>
+        <p>
+          Busco oportunidades donde pueda construir y mantener soluciones backend, aportando codigo claro,
+          buenas practicas y capacidad de aprendizaje continuo.
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="contact-link" href="https://github.com/nakayamaemiliano" target="_blank" rel="noreferrer">
+          <span>GitHub</span>
+          <strong>nakayamaemiliano</strong>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/emiliano-nakayama/" target="_blank" rel="noreferrer">
+          <span>LinkedIn</span>
+          <strong>emiliano-nakayama</strong>
+        </a>
+        <a class="contact-link" href="mailto:eminaka_97@hotmail.com">
+          <span>Email</span>
+          <strong>eminaka_97@hotmail.com</strong>
+        </a>
+        <a class="contact-link" href="tel:+543541386597">
+          <span>Telefono - Argentina</span>
+          <strong>3541386597</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Emiliano Nakayama - Java Backend Developer</p>
+    <a href="#inicio">Volver arriba</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
