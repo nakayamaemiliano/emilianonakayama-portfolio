@@ -16,7 +16,7 @@
     <div class="header-actions">
       <nav class="nav" aria-label="Navegacion principal">
         <a href="#perfil">Perfil</a>
-        <a href="#proyectos">Proyecto</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#stack">Stack</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -91,7 +91,7 @@
         <p class="section-kicker">Proyectos</p>
         <h2 id="projects-title">Backend aplicado a problemas reales.</h2>
         <p>
-          Cada proyecto muestra decisiones de arquitectura, seguridad, persistencia, testing y documentacion.
+          Cada proyecto muestra decisiones de arquitectura, seguridad, persistencia, integraciones, testing y documentacion.
         </p>
       </div>
 
@@ -99,13 +99,50 @@
         <div class="project-main">
           <div class="project-topline">
             <span class="status-dot"></span>
+            <span>Spring Boot REST API + IA</span>
+          </div>
+          <h3>Asistente inteligente de viajes con JWT, APIs externas e IA.</h3>
+          <p>
+            <strong>Asist Viajes API.</strong> Backend para una agencia de viajes que permite gestionar clientes,
+            destinos, consultas y recomendaciones generadas con IA. Integra datos externos de paises y clima,
+            seguridad por roles, documentacion OpenAPI, coleccion Postman, Docker Compose y tests automatizados.
+          </p>
+          <div class="project-actions">
+            <a class="button button-dark" href="https://github.com/nakayamaemiliano/asistente-viajes" target="_blank" rel="noreferrer">Ver repositorio</a>
+            <a class="button button-light" href="https://github.com/nakayamaemiliano/asistente-viajes#readme" target="_blank" rel="noreferrer">Leer README tecnico</a>
+          </div>
+        </div>
+
+        <div class="project-side" aria-label="Evidencia tecnica del proyecto">
+          <div class="metric">
+            <span class="metric-label">Arquitectura</span>
+            <strong>Controller -> Service -> Repository + DTOs</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Auth</span>
+            <strong>Spring Security, JWT y roles ADMIN/ASESOR/LECTOR</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Integraciones</span>
+            <strong>Gemini, REST Countries y Open-Meteo</strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Calidad</span>
+            <strong>55 tests, Swagger, Postman y Docker Compose</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-layout project-secondary">
+        <div class="project-main">
+          <div class="project-topline">
+            <span class="status-dot"></span>
             <span>Spring Boot REST API</span>
           </div>
           <h3>Gestion de turnos con seguridad JWT y arquitectura por capas.</h3>
           <p>
-            <strong>Turnos Odontologico API.</strong> El proyecto resuelve un flujo real de administracion:
-            CRUD de pacientes y odontologos, creacion y
-            seguimiento de turnos, estados de confirmacion/cancelacion, reportes y control de acceso por rol.
+            <strong>Turnos Odontologico API.</strong> Proyecto backend para administrar pacientes, odontologos,
+            turnos, estados de confirmacion/cancelacion, reportes y control de acceso por rol.
           </p>
           <div class="project-actions">
             <a class="button button-dark" href="https://github.com/nakayamaemiliano/turnosOdontologico" target="_blank" rel="noreferrer">Ver repositorio</a>
@@ -137,22 +174,22 @@
         <div class="feature-card">
           <span class="feature-icon" aria-hidden="true">API</span>
           <h3>Contratos REST</h3>
-          <p>Endpoints agrupados para autenticacion, pacientes, odontologos, turnos, usuarios, roles y permisos.</p>
+          <p>Endpoints agrupados por recurso, DTOs de entrada/salida, validaciones y respuestas orientadas al consumidor.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon" aria-hidden="true">JWT</span>
           <h3>Seguridad stateless</h3>
-          <p>Login con token, filtro de validacion, roles ADMIN/USER y permisos sobre recursos protegidos.</p>
+          <p>Login con token, filtro de validacion, roles diferenciados y permisos por tipo de operacion.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon" aria-hidden="true">SQL</span>
-          <h3>Persistencia</h3>
-          <p>Modelo relacional con Spring Data JPA, repositorios dedicados y separacion mediante DTOs y mappers.</p>
+          <span class="feature-icon" aria-hidden="true">IA</span>
+          <h3>Integraciones reales</h3>
+          <p>Consumo de APIs publicas y generacion de recomendaciones con IA dentro de un flujo de negocio.</p>
         </div>
         <div class="feature-card">
           <span class="feature-icon" aria-hidden="true">QA</span>
           <h3>Testing</h3>
-          <p>Tests unitarios con Mockito, contexto Spring, H2 y pruebas de utilidades de seguridad.</p>
+          <p>Tests unitarios de servicios, JWT y configuracion de seguridad con JUnit 5, Mockito y MockMvc.</p>
         </div>
       </div>
     </section>
@@ -169,12 +206,15 @@
         <span>Spring Security</span>
         <span>JWT</span>
         <span>Spring Data JPA</span>
+        <span>RestClient</span>
         <span>MySQL</span>
         <span>H2</span>
         <span>JUnit 5</span>
         <span>Mockito</span>
+        <span>MockMvc</span>
         <span>Swagger / OpenAPI</span>
         <span>Docker</span>
+        <span>APIs externas</span>
         <span>Maven</span>
         <span>Git</span>
       </div>

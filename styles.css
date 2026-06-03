@@ -366,6 +366,15 @@ a {
   margin: 0 auto;
 }
 
+.project-layout + .project-layout {
+  margin-top: 22px;
+}
+
+.project-secondary .project-main {
+  min-height: 360px;
+  box-shadow: none;
+}
+
 .project-main,
 .project-side,
 .feature-card,
